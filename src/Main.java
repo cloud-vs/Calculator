@@ -2,14 +2,19 @@
 import java.util.Scanner;
 
 public class Main {
+    private static int resultNum;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("first number");
-        int a = scanner.nextInt();
-        System.out.println(a + " "+"first number");
-        System.out.println("second number");
-        int b = scanner.nextInt();
-        int c = a + b;
-        System.out.println("Result:" + " " + c);
+            int firstNum = scanner.nextInt();
+            String operation = scanner.next();
+            int secondNum = scanner.nextInt();
+
+            switch (operation){
+                case "-" -> resultNum = firstNum - secondNum;
+                case "+" -> resultNum = firstNum + secondNum;
+                case "*" -> resultNum = firstNum * secondNum;
+                case "/" -> resultNum = firstNum / secondNum;
+            }
+        System.out.println("Result:" + " " + resultNum);
     }
 }
